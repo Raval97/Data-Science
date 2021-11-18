@@ -1,0 +1,18 @@
+require("moments");  require("readxl");  require("kdensity");  
+require("car"); require("dgof"); require("graphics")
+library(gdata)
+require("gdata")
+setwd("D:/Studia/SIP/Projekt1/")
+data<-read.xls("autaMPG.xlsx", sheet ="Dane", verbose=T, method="tab", perl="perl")
+attach(data)
+attach(data$names)
+lm1 <- lm(formula=mpg ~ acceleration)
+summary(lm1)
+res <- lm1$residuals
+qqPlot(res)
+boxplot(res)
+shapiro.test(res)
+Box.test(res,lag=3)
+with(data,plot(acceleration, mpg))
+abline(lm1)
+outlierTest(lm1)
