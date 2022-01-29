@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Dashboard</title>
+
+</head>
+<body style="background-color: beige">
+<div class="mx-auto w-75 mt-3 p-3"  style="background-color: #49a1d5">
+
+    <div>
+        <form action="welcome" method="post">
+            <div class="form-group row">
+                <div class="pl-3">
+                    <button type="submit" class="btn btn-primary">Log Out</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    [[CREATE_BOOK_FORM]]
+
+    <table class="table table-striped p-3" style="background-color: #24597d">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tittle</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year</th>
+        </tr>
+        </thead>
+        <tbody style="color: #fff">
+            [[LIST_OF_BOOKS]]
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
