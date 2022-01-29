@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/SimpleLibrarySpring/js/forUsers.js"></script>
+    <title>Dashboard</title>
+
+</head>
+<body style="background-color: beige">
+<div class="mx-auto w-75 mt-3 p-3"  style="background-color: #49a1d5">
+
+    <div>
+        <form action="/SimpleLibrarySpring/logout" method="post">
+            <div class="form-group row">
+                <div class="pl-3">
+                    <button type="submit" class="btn btn-primary">Log Out</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <table class="table table-striped p-3" style="background-color: #24597d">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody id="books" style="color: #fff">
+        </tbody>
+    </table>
+
+    <table id="bookDetails" class="table table-striped mx-auto w-50 text-center p-3 mb-3" style="background-color: #1e785e">
+
+    </table>
+</div>
+</body>
+</html>

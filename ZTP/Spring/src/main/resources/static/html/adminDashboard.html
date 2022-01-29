@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/SimpleLibrarySpring/js/forAdmin.js"></script>
+    <title>Dashboard</title>
+</head>
+<body style="background-color: beige">
+<div class="mx-auto w-75 mt-3 p-3" style="background-color: #49a1d5">
+
+    <div>
+        <form action="/SimpleLibrarySpring/logout" method="post">
+            <div class="form-group row">
+                <div class="pl-3">
+                    <button type="submit" class="btn btn-primary">Log Out</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="mx-auto w-50 p-3 mb-3" style="background-color: #33aaff">
+        <form onSubmit="return addNewBook();">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                    <input id="title" type="text" name="title" class="form-control" placeholder="Title" required="required">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Author</label>
+                <div class="col-sm-10">
+                    <input id="author" type="text" name="author" class="form-control" placeholder="Author" required="required" >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Year</label>
+                <div class="col-sm-10">
+                    <input id="year" type="number" min="0" max="2030" step="1" value="2021" name="year"
+                           class="form-control" placeholder="The year of publishment">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="mx-auto">
+                    <button type="submit" class="btn btn-primary">Add New Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <table class="table table-striped p-3" style="background-color: #24597d">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year</th>
+            <th scope="col" colspan="2" style="text-align: center;">Action</th>
+        </tr>
+        </thead>
+        <tbody id="books" style="color: #fff">
+        </tbody>
+    </table>
+
+    <table id="bookDetails" class="table table-striped mx-auto w-50 text-center p-3 mb-3" style="background-color: #1e785e">
+
+    </table>
+</div>
+</body>
+</html>
